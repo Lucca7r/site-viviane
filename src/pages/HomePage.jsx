@@ -6,6 +6,7 @@ import Beneficios from "../components/Beneficios";
 import "../components/SobreMim";
 import SobreMim from "../components/SobreMim";
 import Depoimentos from "../components/Depoimentos";
+import Faq from '../components/Faq'; 
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Beneficios />
       <SobreMim />
       <Depoimentos/>
+      <Faq />
     </div>
   );
 };

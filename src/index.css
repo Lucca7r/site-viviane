@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #EACCAD; 
+  border-radius: 50%; 
+  width: 50px;
+  height: 50px; 
+  color: #FFFFFF !important; 
+  fill: white !important; 
+  stroke: white !important;
+}
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+
+.swiper-button-prev {
+  left: -10px;
+}
+
+
+.swiper-button-next {
+  right: -10px;
+}
+
+
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: 5px;
+  }
+  .swiper-button-next {
+    right: 5px;
+  }
+}

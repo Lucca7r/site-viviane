@@ -15,7 +15,7 @@ const Header = () => {
       <nav className="container mx-auto flex justify-between items-center">
         <a href="/">
           <img
-            src="/logoVivi.png"
+            src="/logoViviane.png"
             alt="Logo Viviane Energia"
             className="h-14"
           />

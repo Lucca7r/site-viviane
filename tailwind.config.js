@@ -7,15 +7,16 @@ export default {
     extend: {
       // NOVA PALETA DE CORES
       colors: {
-        'bege-claro': '#FBF8F3',     // Um fundo principal mais quente e elegante
-        'verde-suave': '#A3B18A',   // Um verde terroso e calmante
-        'dourado-calmo': '#DDA15E',  // Para detalhes e botões
-        'rosa-queimado': '#BC6C25', // Um tom mais forte para contraste
-        'cinza-texto': '#343a40',   // Para textos, melhor que o preto puro
+        'bege-claro': '#FBF8F3',
+        'verde-suave': '#A3B18A',
+        'dourado-calmo': '#DDA15E',
+        'rosa-queimado': '#BC6C25',
+        'cinza-texto': '#343a40',
+        'rosa-nude': '#EACCAD',  
       },
-      // NOVAS FONTES
+      
       fontFamily: {
-        'display': ['"Playfair Display"', 'serif'], // Fonte elegante para títulos
+        'display': ['"Playfair Display"', 'serif'],
         'body': ['"Raleway"', 'sans-serif'],        // Fonte limpa para o corpo do texto
       },
       backgroundImage: {
