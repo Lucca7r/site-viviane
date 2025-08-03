@@ -8,11 +8,11 @@ export default defineConfig({
   name: 'default',
   title: 'viviane.radiestesista.site',
 
-  projectId: 'np75d61o',
+  projectId: 'snp75d61o',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
   schema: {
-        types: [...schemaTypes, faq], // 2. Adicione-o aqui
-      },
+    types: [...schemaTypes, faq], // 2. Adicione-o aqui
+  },
 })
