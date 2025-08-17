@@ -1,86 +1,76 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+// src/layouts/Header.jsx
+import React, { useState } from 'react';
+// Adicione FaInstagram à importação
+import { FaBars, FaTimes, FaInstagram } from 'react-icons/fa'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { title: "Sobre", href: "#sobre" },
-    { title: "Benefícios", href: "#beneficios" },
-    { title: "Depoimentos", href: "#depoimentos" },
+    { title: 'Sobre', href: '#sobre' },
+    { title: 'Benefícios', href: '#beneficios' },
+    { title: 'Depoimentos', href: '#depoimentos' },
   ];
+
+  const instagramUrl = 'https://www.instagram.com/terapeuta.olivve/';
 
   return (
     <header className="bg-bege-claro shadow-sm p-4 sticky top-0 z-50 font-body relative">
       <nav className="container mx-auto flex justify-between items-center">
         <a href="/">
-          <img
-            src="/logoViviane.png"
-            alt="Logo Viviane Energia"
-            className="h-14"
-          />
+          <img src="/logoviviane2.png" alt="Logo Viviane Energia" className="h-14" />
         </a>
 
+        {/* Menu para telas grandes (Desktop) */}
         <ul className="hidden md:flex items-center space-x-8 text-cinza-texto font-medium">
           {navLinks.map((link) => (
             <li key={link.title}>
-              <a
-                href={link.href}
-                className="hover:text-dourado-calmo transition-colors duration-300"
-              >
+              <a href={link.href} className="hover:text-dourado-calmo transition-colors duration-300">
                 {link.title}
               </a>
             </li>
           ))}
+          {/* Ícone do Instagram adicionado aqui */}
           <li>
-            <a
-              href="#contato"
-              className="bg-verde-suave text-white font-semibold py-2 px-5 rounded-full hover:bg-opacity-90 transition-all duration-300"
-            >
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-dourado-calmo transition-colors duration-300">
+              <FaInstagram size={24} />
+            </a>
+          </li>
+          <li>
+            <a href="#contato" className="bg-verde-suave text-white font-semibold py-2 px-5 rounded-full hover:bg-opacity-90 transition-all duration-300">
               Contato
             </a>
           </li>
         </ul>
 
+        {/* Botão do Menu Hambúrguer */}
         <div className="md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-cinza-texto focus:outline-none"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-cinza-texto focus:outline-none">
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
       </nav>
 
+      {/* Menu Móvel (Overlay) */}
       <div
-        className={`
-          absolute top-full left-0 w-full bg-bege-claro shadow-lg md:hidden
-          transition-all duration-300 ease-in-out
-          ${
-            isMenuOpen
-              ? "opacity-100 visible translate-y-0"
-              : "opacity-0 invisible -translate-y-4"
-          }
-        `}
+        className={`absolute top-full left-0 w-full bg-bege-claro shadow-lg md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}
       >
         <ul className="flex flex-col items-center p-4">
           {navLinks.map((link) => (
             <li key={link.title} className="w-full text-center py-3">
-              <a
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="hover:text-dourado-calmo transition-colors duration-300 text-lg"
-              >
+              <a href={link.href} onClick={() => setIsMenuOpen(false)} className="hover:text-dourado-calmo transition-colors duration-300 text-lg">
                 {link.title}
               </a>
             </li>
           ))}
+          {/* Ícone do Instagram adicionado ao menu móvel */}
+          <li className="w-full text-center py-3">
+             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="inline-block hover:text-dourado-calmo transition-colors duration-300">
+              <FaInstagram size={28} />
+            </a>
+          </li>
           <li className="w-full text-center py-3 mt-4">
-            <a
-              href="#contato"
-              onClick={() => setIsMenuOpen(false)}
-              className="bg-verde-suave text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition-all duration-300"
-            >
+            <a href="#contato" onClick={() => setIsMenuOpen(false)} className="bg-verde-suave text-white font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition-all duration-300">
               Contato
             </a>
           </li>

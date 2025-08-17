@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import faq from './schemaTypes/faq'
 import certificado from './schemaTypes/certificado'
+import depoimento from './schemaTypes/depoimento'
 
 export default defineConfig({
   name: 'default',
@@ -14,6 +15,6 @@ export default defineConfig({
 
   plugins: [structureTool(), visionTool()],
   schema: {
-    types: [...schemaTypes, faq, certificado], // 2. Adicione-o aqui
+    types: [...schemaTypes, faq, certificado, depoimento],
   },
 })
