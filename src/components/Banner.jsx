@@ -13,12 +13,24 @@ const Banner = () => {
     <section className="relative bg-banner-image bg-cover bg-center h-[600px] flex items-center justify-center font-body">
       <div className="absolute inset-0 bg-verde-suave"></div>
 
-      <div className="relative text-center text-white px-4">
+      
+
+      <div className="relative text-center text-white px-4 flex flex-col items-center">
+        <img 
+          src="/logoviviane2.png" // NOME DO ARQUIVO ALTERADO
+          alt="Logo Viviane Energia"
+          className="h-28 md:h-30 mb-6" // Ajuste o tamanho e a margem conforme necessário
+        />
         <h1 className="font-display text-5xl md:text-7xl font-bold">
           Radiestesia Terapêutica
         </h1>
         <p className="mt-4 text-xl md:text-2xl font-light">
-          Equilíbrio e Bem-Estar para sua Vida
+          Equilíbrio e Bem-Estar Através da Energia
+        </p>
+        <p className="mt-4 text-xl md:text-1xl font-light">
+          A Radiestesia é uma prática milenar utilizada para detectar e harmonizar vibrações energéticas presentes em pessoas, animais, ambientes e até situações específicas.
+Por meio de instrumentos como pêndulos e gráficos radiônicos, é possível identificar desequilíbrios que afetam os chakras, a aura, os corpos sutis e a frequência vibracional, promovendo bem-estar integral.
+
         </p>
 
         <a

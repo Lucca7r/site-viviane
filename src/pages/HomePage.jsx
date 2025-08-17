@@ -7,6 +7,7 @@ import SobreMim from "../components/SobreMim";
 import Depoimentos from "../components/Depoimentos";
 import Faq from "../components/Faq";
 import Contato from "../components/Contato";
+import Tratamentos from "../components/Tratamentos";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Banner />
       <IntroSobre />
       <Beneficios />
+      <Tratamentos />
       <SobreMim />
       <Depoimentos />
       <Faq />

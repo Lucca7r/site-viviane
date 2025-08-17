@@ -10,11 +10,10 @@ const IntroSobre = () => {
         </h2>
 
         <p className="text-lg text-cinza-texto max-w-3xl mx-auto leading-relaxed">
-          A Radiestesia Terapêutica é uma prática ancestral que nos permite
-          identificar e tratar desequilíbrios energéticos no corpo, na mente e
-          nos ambientes. Utilizando instrumentos como o pêndulo, é possível
-          acessar informações do seu campo energético para promover cura,
-          clareza e um profundo bem-estar.
+         
+A análise radiestésica é feita a partir de um testemunho, que pode ser uma foto atual da pessoa, nome completo e data de nascimento.
+Com esses dados, o radiestesista utiliza o pêndulo para "medir" a frequência vibracional e fazer leituras em gráficos radiônicos ou tabelas específicas.
+
         </p>
         <p className="text-lg text-cinza-texto max-w-3xl mx-auto mt-4 leading-relaxed">
           É uma jornada de autoconhecimento e transformação que restaura sua

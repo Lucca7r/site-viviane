@@ -13,6 +13,7 @@ export default {
         'rosa-queimado': '#BC6C25',
         'cinza-texto': '#343a40',
         'rosa-nude': '#EACCAD',  
+        'cinza-gelo': '#EDEADE',
       },
       
       fontFamily: {
