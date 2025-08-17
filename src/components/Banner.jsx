@@ -10,35 +10,44 @@ const Banner = () => {
   )}`;
 
   return (
-    <section className="relative bg-banner-image bg-cover bg-center h-[600px] flex items-center justify-center font-body">
-      <div className="absolute inset-0 bg-verde-suave"></div>
-
-      
+    // CORREÇÃO: Removida a altura fixa e adicionado padding vertical (py-20)
+    // para que a altura se ajuste ao conteúdo.
+    <section className="relative bg-banner-image bg-cover bg-center py-20 font-body">
+      {/* CORREÇÃO: Adicionado um filtro de gradiente para um visual mais suave */}
+      <div className="absolute inset-0 bg-gradient-to-t from-verde-suave via-verde-suave/80 to-verde-suave/60"></div>
 
       <div className="relative text-center text-white px-4 flex flex-col items-center">
-        <img 
-          src="/logoviviane2.png" // NOME DO ARQUIVO ALTERADO
+        <img
+          src="/logoviviane2.png"
           alt="Logo Viviane Energia"
-          className="h-28 md:h-30 mb-6" // Ajuste o tamanho e a margem conforme necessário
+          // CORREÇÃO: Tamanho do logo ajustado para ser menor em telemóveis
+          className="h-24 md:h-28 mb-6"
         />
-        <h1 className="font-display text-5xl md:text-7xl font-bold">
+        {/* CORREÇÃO: Tamanhos de fonte responsivos para o título principal */}
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold">
           Radiestesia Terapêutica
         </h1>
-        <p className="mt-4 text-xl md:text-2xl font-light">
+        {/* CORREÇÃO: Tamanhos de fonte responsivos para o subtítulo */}
+        <p className="mt-4 text-lg md:text-2xl font-light">
           Equilíbrio e Bem-Estar Através da Energia
         </p>
-        <p className="mt-4 text-xl md:text-1xl font-light">
-          A Radiestesia é uma prática milenar utilizada para detectar e harmonizar vibrações energéticas presentes em pessoas, animais, ambientes e até situações específicas.
-Por meio de instrumentos como pêndulos e gráficos radiônicos, é possível identificar desequilíbrios que afetam os chakras, a aura, os corpos sutis e a frequência vibracional, promovendo bem-estar integral.
-
+        {/* CORREÇÃO: Tamanho de fonte e largura máxima para o parágrafo longo */}
+        <p className="mt-6 text-base md:text-lg font-light max-w-3xl">
+          A Radiestesia é uma prática milenar utilizada para detectar e
+          harmonizar vibrações energéticas presentes em pessoas, animais,
+          ambientes e até situações específicas. Por meio de instrumentos como
+          pêndulos e gráficos radiônicos, é possível identificar desequilíbrios
+          que afetam os chakras, a aura, os corpos sutis e a frequência
+          vibracional, promovendo bem-estar integral.
         </p>
 
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          // CORREÇÃO: Padding simplificado que funciona bem em todos os ecrãs
           className="inline-block mt-8 bg-gradient-to-br from-dourado-calmo to-rosa-queimado text-white font-semibold 
-                     py-3 px-10 rounded-full shadow-lg 
+                     py-3 px-8 rounded-full shadow-lg
                      transition duration-300 ease-in-out transform hover:scale-105"
         >
           Agendar Sessão
