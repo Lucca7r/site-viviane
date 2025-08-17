@@ -13,7 +13,7 @@ const SobreMim = () => {
 
         {/* Foto em destaque no centro */}
         <img
-          src="https://placehold.co/400x400/A3B18A/FBF8F3?text=Viviane"
+          src="/profilevivi.jpg"
           alt="Terapeuta Viviane"
           className="rounded-full shadow-lg w-48 h-48 object-cover mx-auto mb-8"
         />
